@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundmain"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -27,19 +28,19 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="109dp"
+                android:layout_height="136dp"
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/editTextText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginTop="60dp"
+                    android:layout_weight="1"
                     android:ems="10"
+                    android:hint="Buscar"
                     android:inputType="text"
-                    android:textColor="@color/black"
-                    android:hint="Buscar"/>
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -63,11 +64,11 @@
 
             </FrameLayout>
 
-            <LinearLayout
+            <GridLayout
                 android:id="@+id/mi_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"></LinearLayout>
+                android:columnCount="4"></GridLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
