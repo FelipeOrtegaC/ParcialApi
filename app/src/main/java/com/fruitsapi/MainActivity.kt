@@ -34,6 +34,18 @@ class MainActivity : AppCompatActivity() {
             "Kiwi", "Limón", "Mango", "Nectarina", "Naranja",
             "Papaya", "Piña", "Granada", "Frambuesa", "Fresa",
             "Tamarindo", "Uva", "Sandía", "Xigua", "Yaca",
+            "Zarzamora", "Aguacate", "Bilimbi", "Carambola", "Durazno",
+            "Manzana", "Banana", "Cereza", "Dátil", "Elderberry",
+            "Higo", "Grosella", "Higo chumbo", "Melón", "Jaca",
+            "Kiwi", "Limón", "Mango", "Nectarina", "Naranja",
+            "Papaya", "Piña", "Granada", "Frambuesa", "Fresa",
+            "Tamarindo", "Uva", "Sandía", "Xigua", "Yaca",
+            "Zarzamora", "Aguacate", "Bilimbi", "Carambola", "Durazno",
+            "Manzana", "Banana", "Cereza", "Dátil", "Elderberry",
+            "Higo", "Grosella", "Higo chumbo", "Melón", "Jaca",
+            "Kiwi", "Limón", "Mango", "Nectarina", "Naranja",
+            "Papaya", "Piña", "Granada", "Frambuesa", "Fresa",
+            "Tamarindo", "Uva", "Sandía", "Xigua", "Yaca",
             "Zarzamora", "Aguacate", "Bilimbi", "Carambola", "Durazno")
         val linearLayout = findViewById<GridLayout>(R.id.mi_linear_layout)
 

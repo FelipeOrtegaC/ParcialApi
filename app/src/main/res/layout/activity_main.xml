@@ -34,13 +34,14 @@
                 <EditText
                     android:id="@+id/editTextText"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="61dp"
                     android:layout_marginTop="60dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="Buscar"
                     android:inputType="text"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="20dp"/>
 
                 <TextView
                     android:id="@+id/textView"
@@ -48,9 +49,10 @@
                     android:layout_height="48dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
+                    android:gravity="center"
                     android:layout_weight="1"
                     android:text="Ordenar por:"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -63,12 +65,16 @@
                     android:layout_weight="1" />
 
             </FrameLayout>
-
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/descripcion_scroll_view">
             <GridLayout
                 android:id="@+id/mi_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:columnCount="4"></GridLayout>
+            </ScrollView>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

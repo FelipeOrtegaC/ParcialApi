@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FruitsApi</string>
+    <string name="descripcion_scroll_view">scroll</string>
 </resources>
