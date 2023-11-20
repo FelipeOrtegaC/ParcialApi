@@ -9,6 +9,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.TypedValue
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -63,6 +64,16 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parentView: AdapterView<*>?, selectedItemView: View?, position: Int, id: Long) {
+                val selectedFilterPosition = position
+                orderFruitBynutreint(selectedFilterPosition, viewModel.fruits.value ?: emptyList())
+            }
+
+            override fun onNothingSelected(parentView: AdapterView<*>?) {
+            }
+        }
+
         var Edtxt:EditText = findViewById(R.id.editTextText)
         Edtxt.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -82,6 +93,38 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun orderFruitBynutreint(Index: Int, fruits: List<Fruit>){
+        when (Index) {
+            0 -> {
+                // Ordenar por calorías
+                val sortedFruits = fruits.sortedBy { it.nutritions.calories }
+                updateUIWithFruits(sortedFruits)
+            }
+            1 -> {
+                // Ordenar por grasas
+                val sortedFruits = fruits.sortedBy { it.nutritions.fat }
+                updateUIWithFruits(sortedFruits)
+            }
+            2 -> {
+                // Ordenar por azucares
+                val sortedFruits = fruits.sortedBy { it.nutritions.sugar }
+                updateUIWithFruits(sortedFruits)
+            }
+            3 -> {
+                // Ordenar por carbohidratos
+                val sortedFruits = fruits.sortedBy { it.nutritions.carbohydrates }
+                updateUIWithFruits(sortedFruits)
+            }
+            4 -> {
+                // Ordenar por proteinas
+                val sortedFruits = fruits.sortedBy { it.nutritions.protein }
+                updateUIWithFruits(sortedFruits)
+            }
+            else -> {
+                updateUIWithFruits(fruits)
+            }
+        }
+    }
 
     private fun updateUIWithFruits(fruits: List<Fruit>) {
         val linearLayout = findViewById<GridLayout>(R.id.mi_linear_layout)
