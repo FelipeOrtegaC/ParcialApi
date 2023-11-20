@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/backgroundnutrientes">
+    android:background="@drawable/backgroundmain"
+    tools:context=".View.NutrientesActivity">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.frutas.viewModel.RetrofitService" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -25,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:text="Nombre de fruta" />
+            android:text="Nombre de fruta"
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/nutritionsname"
             android:layout_width="match_parent"
@@ -33,7 +43,8 @@
             android:layout_marginTop="15dp"
             android:textSize="25dp"
             android:text="Nutrientes"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,14 +57,18 @@
                 android:layout_height="42dp"
                 android:layout_marginTop="15dp"
                 android:text="Calorias:"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
             <TextView
                 android:id="@+id/fruitvaluecal"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginTop="15dp"
                 android:text="000"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
         </LinearLayout>
 
@@ -67,14 +82,18 @@
                 android:layout_width="134dp"
                 android:layout_height="42dp"
                 android:text="Grasas: "
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
             <TextView
                 android:id="@+id/fruitvaluefat"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:text="000"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
         </LinearLayout>
 
@@ -88,14 +107,18 @@
                 android:layout_width="134dp"
                 android:layout_height="wrap_content"
                 android:text="Azucar: "
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
             <TextView
                 android:id="@+id/fruitvaluesug"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="000"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
         </LinearLayout>
 
@@ -109,14 +132,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Carbohidratos: "
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
             <TextView
                 android:id="@+id/fruitvaluecarb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="000"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
         </LinearLayout>
 
@@ -130,7 +157,9 @@
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:text="Proteinas: "
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
             <TextView
                 android:id="@+id/fruitvalueprot"
@@ -138,7 +167,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:text="000"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:background="@color/white"/>
 
         </LinearLayout>
 
@@ -156,4 +187,5 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

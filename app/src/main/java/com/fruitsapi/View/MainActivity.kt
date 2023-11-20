@@ -53,8 +53,14 @@ class MainActivity : AppCompatActivity() {
         // Asigna el adaptador al Spinner
         spinner.adapter = adapter
 
+
         viewModel.fruits.observe(this, Observer { fruits ->
-            updateUIWithFruits(fruits)
+            if (spinner.isActivated){
+
+            }else{
+                updateUIWithFruits(fruits)
+            }
+
         })
 
         var Edtxt:EditText = findViewById(R.id.editTextText)
@@ -73,19 +79,9 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+
     }
 
-    /*
-    private fun sortByNutritionalValue() {
-
-        val spinner: Spinner = findViewById(R.id.spinner)
-        val selectedProperty = spinner.selectedItem as NutritionalProperty
-        val sortedFruits = retrofitService.sortFruitsByNutritionalValue(selectedProperty)
-        // Manejar el resultado, por ejemplo, actualizar la UI con las frutas ordenadas
-        updateUIWithFruits(sortedFruits)
-    }
-
-     */
 
     private fun updateUIWithFruits(fruits: List<Fruit>) {
         val linearLayout = findViewById<GridLayout>(R.id.mi_linear_layout)
@@ -161,24 +157,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun findFruitsByFilter(indexList:Int,order:Boolean,fruits: List<Fruit>):List<Fruit>{
-        return if(order)
-            when(indexList){
-                1->fruits.sortedBy { it.nutritions.fat }.asReversed()
-                2->fruits.sortedBy { it.nutritions.sugar }.asReversed()
-                3->fruits.sortedBy { it.nutritions.carbohydrates }.asReversed()
-                4->fruits.sortedBy { it.nutritions.protein }.asReversed()
-                else -> fruits.sortedBy { it.nutritions.calories }.asReversed()
-            }
-        else
-            when(indexList){
-                1->fruits.sortedBy { it.nutritions.fat }
-                2->fruits.sortedBy { it.nutritions.sugar }
-                3->fruits.sortedBy { it.nutritions.carbohydrates }
-                4->fruits.sortedBy { it.nutritions.protein }
-                else -> fruits.sortedBy { it.nutritions.calories }
-            }
-    }
 }
 
 
