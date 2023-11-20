@@ -1,14 +1,10 @@
-package com.fruitsapi
+package com.fruitsapi.View
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
-import com.fruitsapi.viewModel.listFilters
+import com.fruitsapi.R
 
 class NutrientesActivity : AppCompatActivity() {
 
