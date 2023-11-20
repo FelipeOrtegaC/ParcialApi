@@ -18,5 +18,131 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/fruitname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Nombre de fruta" />
+        <TextView
+            android:id="@+id/nutritionsname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="25dp"
+            android:text="Nutrientes"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fruitcalories"
+                android:layout_width="134dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="15dp"
+                android:text="Calorias:"
+                android:textSize="25dp" />
+            <TextView
+                android:id="@+id/fruitvaluecal"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="15dp"
+                android:text="000"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fruitfat"
+                android:layout_width="134dp"
+                android:layout_height="42dp"
+                android:text="Grasas: "
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/fruitvaluefat"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="000"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fruitsugar"
+                android:layout_width="134dp"
+                android:layout_height="wrap_content"
+                android:text="Azucar: "
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/fruitvaluesug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="000"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fruitcarb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carbohidratos: "
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/fruitvaluecarb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="000"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fruitprot"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:text="Proteinas: "
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/fruitvalueprot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="000"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

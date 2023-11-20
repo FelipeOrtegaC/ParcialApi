@@ -10,9 +10,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.GridLayout
-import android.widget.LinearLayout
 import android.widget.Spinner
-import androidx.compose.runtime.remember
 import com.fruitsapi.viewModel.listFilters
 import com.frutas.model.ApiService
 import com.frutas.model.Fruit
